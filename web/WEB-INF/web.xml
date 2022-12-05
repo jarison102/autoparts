@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+    <servlet>
+        <servlet-name>UsuarioControlador</servlet-name>
+        <servlet-class>Controlador.UsuarioControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorQueja</servlet-name>
+        <servlet-class>Controlador.ControladorQueja</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorVenta</servlet-name>
+        <servlet-class>Controlador.ControladorVenta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorProducto</servlet-name>
+        <servlet-class>Controlador.ControladorProducto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsuarioControlador</servlet-name>
+        <url-pattern>/UsuarioControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorQueja</servlet-name>
+        <url-pattern>/ControladorQueja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorVenta</servlet-name>
+        <url-pattern>/ControladorVenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorProducto</servlet-name>
+        <url-pattern>/ControladorProducto</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            1000
+        </session-timeout>
+    </session-config>
+     <error-page>
+        <error-code>404</error-code>
+        <location>/error404.jsp</location> 
+    </error-page>
+           <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>puerto</param-name>
+        <param-value>587</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>usuarioCorreo</param-name>
+        <param-value>jarimices@gmail.com</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>maiphhxhxkiotqxv</param-value>
+    </context-param>
+</web-app>

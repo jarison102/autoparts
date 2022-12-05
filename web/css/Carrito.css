@@ -1,0 +1,20 @@
+.close{
+    height: 50px;
+    width: 70px;
+    color: white;
+}
+#Colorheader{
+    background-color: black;
+}
+.NombrePro{
+    color: white;
+}
+.Descripcion{
+        color: #8F1900;
+
+}
+.Marca{
+    color: #8F1900;
+    margin-right: 390px;
+
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="680" pageHeight="842" columnWidth="640" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77dc6379-73cf-4461-b45d-949e282b1953">
+	<property name="ireport.zoom" value="2.1435888100000047"/>
+	<property name="ireport.x" value="340"/>
+	<property name="ireport.y" value="96"/>
+	<parameter name="fecha" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select persona.nombre,persona.apellido,inventario.fecha_inventario,inventario.informacion_inventario,inventario.perdidas_productos from inventario INNER JOIN persona ON inventario.id_persona_fk=persona.id_persona where fecha_inventario=$P{fecha}]]>
+	</queryString>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_inventario" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="informacion_inventario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="perdidas_productos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="126">
+			<image>
+				<reportElement x="266" y="0" width="166" height="112" uuid="1e004907-0030-4f47-8027-0463e0f027a3"/>
+				<imageExpression><![CDATA["C:\\Users\\POWER\\Desktop\\WhatsApp Image 2022-11-23 at 11.05.56.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="680" height="1" forecolor="#666666" uuid="1970b98c-c35d-4951-8054-f77f40b1bfd7"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="86" y="0" width="136" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4978a92d-4de4-46f0-943d-76aaa0a0cb7b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="194" y="0" width="156" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3af9bb1f-daf1-4380-a287-15b3794bb3d1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="350" y="0" width="152" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3eef372b-2c86-4050-88df-eca5ebf44efd"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="472" y="0" width="188" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="28f6ab6c-5856-4902-8afa-1ca585d6f503"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perdidas_productos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-45" y="0" width="131" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5297d488-108d-4799-87ff-4baa6021076b"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="79">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-20" y="21" width="680" height="1" uuid="16827e5f-e96d-4e55-8dac-5c568fc9e28b"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="cd1e8c4e-c5c3-4f83-8d43-52310d502850"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="250" y="1" width="111" height="20" uuid="f8318178-0ad6-46b9-a49a-69b0d259962b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_inventario}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="555" y="1" width="111" height="20" uuid="55b6fed8-0f92-4456-b443-b6d7e5b8667a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perdidas_productos}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="128" y="2" width="122" height="20" uuid="cb94fc6e-eea2-4e2c-87b5-e4c26942768a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="372" y="0" width="111" height="20" uuid="259b08d4-b675-47a1-b288-bca36cbb2719"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{informacion_inventario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="d9613feb-cfe6-45ea-a39c-4a6e8ceeddba"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="6927c642-9c32-4210-9f9c-1e0778644172"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="ddc2eb4c-d15c-461d-a9e9-c9490a4d62f8"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

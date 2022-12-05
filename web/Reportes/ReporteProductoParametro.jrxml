@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="5000" pageHeight="5000" columnWidth="4960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="06120c1b-afaf-4046-9c52-8d35036fc674">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="producto" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="persona" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from compra as com inner join detallecompra as det on com.id_compra= det.id_compra_fk inner join producto as pro on det.id_producto_fk=pro.id_producto inner join detalleventa as deta on deta.id_producto_fk=pro.id_producto inner join venta as ven on deta.id_detalle_venta=ven.id_venta inner join persona as per on per.id_persona=ven.id_persona_fk where per.id_persona=$P{persona}]]>
+	</queryString>
+	<field name="id_compra" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_compra" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado_compra" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="factura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_proveedor_fk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_detalle_compra" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_producto_fk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_compra_fk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio_compra" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad_compra" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_producto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="marca_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad_producto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="foto" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio_producto" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_detalle_venta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_venta_fk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio_venta" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_venta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_venta" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_entrega" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_venta" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_persona_fk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_persona" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tdoc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="documento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_usuario_fk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<columnHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="00e092bd-f232-4fdf-8a03-f5ca7e695270"/>
+				<text><![CDATA[id_compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="0" width="100" height="20" uuid="1d7c88aa-bd77-4d68-8ad8-2039b1cf2a2e"/>
+				<text><![CDATA[fecha_compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="100" height="20" uuid="76a01614-2b96-4394-928a-28160bc70e8b"/>
+				<text><![CDATA[estado_compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="0" width="100" height="20" uuid="cce385b6-deb0-4fb3-a777-b4ed6347ba55"/>
+				<text><![CDATA[factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="0" width="100" height="20" uuid="87432c70-ab2f-4c28-b3ce-25bb2b86abb2"/>
+				<text><![CDATA[id_proveedor_fk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="667" y="0" width="100" height="20" uuid="66012132-7e10-4c63-b393-b4d8725cb25f"/>
+				<text><![CDATA[id_detalle_compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="806" y="0" width="100" height="20" uuid="8e5f8a72-58cf-4208-945e-8b55e567160f"/>
+				<text><![CDATA[id_producto_fk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="967" y="0" width="100" height="20" uuid="6f140702-c488-4340-8a7a-59374a95cd9f"/>
+				<text><![CDATA[nombre_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1085" y="0" width="100" height="20" uuid="5ade95d6-d4bb-4f6c-8c4d-4c2d15977fb6"/>
+				<text><![CDATA[marca_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1204" y="1" width="100" height="20" uuid="227446aa-2118-4ddf-adc3-9360dce87907"/>
+				<text><![CDATA[cantidad_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1337" y="1" width="100" height="20" uuid="e6ef80c5-b160-447f-88c1-5e737130d1fc"/>
+				<text><![CDATA[foto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1467" y="0" width="100" height="20" uuid="fcca736b-2847-4b69-b39d-4d7aeab1e0c6"/>
+				<text><![CDATA[precio_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1611" y="0" width="100" height="20" uuid="01f74b90-d8b9-4cb4-b85c-9a483c9003c9"/>
+				<text><![CDATA[precio_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1750" y="1" width="100" height="20" uuid="22a1ac68-70e6-42ea-89e0-0da738243655"/>
+				<text><![CDATA[id_venta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1898" y="1" width="100" height="20" uuid="e982b40a-fcc8-4ca7-8cac-90c49f7e0afd"/>
+				<text><![CDATA[fecha_venta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2047" y="1" width="100" height="20" uuid="4517eac2-3bd3-46cd-9653-28993d96f72b"/>
+				<text><![CDATA[fecha_entrega]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2184" y="1" width="100" height="20" uuid="e4b06b2c-6262-45e4-90ab-1ceb5c4629b5"/>
+				<text><![CDATA[total_venta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2342" y="1" width="100" height="20" uuid="62ce679d-068c-44bd-a9b2-d309e4633b3b"/>
+				<text><![CDATA[id_persona_fk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2498" y="1" width="100" height="20" uuid="c76f0d01-f1f5-4123-b271-a5822fcba694"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2669" y="1" width="100" height="20" uuid="db73b7ce-9f6e-4b34-8400-96d7f88f7d78"/>
+				<text><![CDATA[apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2823" y="0" width="100" height="20" uuid="b395f9ef-a98d-4812-95ea-251d236fb76a"/>
+				<text><![CDATA[tdoc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2984" y="1" width="100" height="20" uuid="ce23b746-7c8f-448a-b5e1-1eeb8a365a2b"/>
+				<text><![CDATA[documento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3140" y="0" width="100" height="20" uuid="772e1c42-98c2-4ae2-81cf-32df68fbd424"/>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3277" y="0" width="100" height="20" uuid="7ded6593-5ec6-47f7-a589-2307f679bad9"/>
+				<text><![CDATA[direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3422" y="0" width="100" height="20" uuid="43729546-bbd8-46b3-848c-d2cb0f3db11d"/>
+				<text><![CDATA[id_usuario_fk]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="9233ff64-2f40-4bc3-b013-5fdd33294009"/>
+				<textFieldExpression><![CDATA[$F{id_compra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="0" width="100" height="20" uuid="fa72a26b-e175-449d-90ef-4426c18e0243"/>
+				<textFieldExpression><![CDATA[$F{fecha_compra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="100" height="20" uuid="60c9546f-f5bb-4c60-93f0-202ad5ab3004"/>
+				<textFieldExpression><![CDATA[$F{estado_compra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="0" width="100" height="20" uuid="8131d1e2-35c5-4997-84f9-25747aba6350"/>
+				<textFieldExpression><![CDATA[$F{factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="515" y="0" width="100" height="20" uuid="3a784e99-a6da-4ba6-aac4-2e596c2c5021"/>
+				<textFieldExpression><![CDATA[$F{id_proveedor_fk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="667" y="0" width="100" height="20" uuid="29bd6cae-7632-46b3-a65a-aef851a49c21"/>
+				<textFieldExpression><![CDATA[$F{id_detalle_compra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="806" y="0" width="100" height="20" uuid="4b792b07-854d-4054-bd7c-9c0c798e8d9f"/>
+				<textFieldExpression><![CDATA[$F{id_producto_fk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="967" y="0" width="100" height="20" uuid="bd197a82-481d-467c-b349-121a7e87203c"/>
+				<textFieldExpression><![CDATA[$F{nombre_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1085" y="0" width="100" height="20" uuid="57f724bb-3a1c-4ec6-9e82-abe99ed1bd48"/>
+				<textFieldExpression><![CDATA[$F{marca_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1204" y="0" width="100" height="20" uuid="d6fe602b-c2c4-4afe-ba8e-8dd9250a6816"/>
+				<textFieldExpression><![CDATA[$F{cantidad_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1337" y="0" width="100" height="20" uuid="c7a82ae0-3778-4025-90d6-55cbafa411ce"/>
+				<textFieldExpression><![CDATA[""+$F{foto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1467" y="0" width="100" height="20" uuid="be25cdfc-52fa-45de-a6d2-c5fd7837a579"/>
+				<textFieldExpression><![CDATA[$F{precio_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1611" y="0" width="100" height="20" uuid="8d31b6d2-a886-47de-944f-97dd7f732c63"/>
+				<textFieldExpression><![CDATA[$F{precio_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1750" y="0" width="100" height="20" uuid="d7759e02-eadf-4314-8abc-ae5f581b128e"/>
+				<textFieldExpression><![CDATA[$F{id_venta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1898" y="0" width="100" height="20" uuid="67f73223-95d1-49df-9116-985a16cff895"/>
+				<textFieldExpression><![CDATA[$F{fecha_venta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2047" y="0" width="100" height="20" uuid="1643f32a-6154-4ad6-997e-041565250085"/>
+				<textFieldExpression><![CDATA[$F{fecha_entrega}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2184" y="0" width="100" height="20" uuid="db4e9871-f05c-4f9a-87a3-97a8fffd17d1"/>
+				<textFieldExpression><![CDATA[$F{total_venta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2342" y="0" width="100" height="20" uuid="7f57d2d4-e370-46dc-9950-1de0afc0d355"/>
+				<textFieldExpression><![CDATA[$F{id_persona_fk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2498" y="0" width="100" height="20" uuid="66707f91-3147-457a-8c6d-cff08d84457d"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2669" y="0" width="100" height="20" uuid="ed99c3d0-35a5-467d-bd07-ae8c2cc5429e"/>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2823" y="0" width="100" height="20" uuid="456c9590-3be9-45a4-adbe-fd483749c1cb"/>
+				<textFieldExpression><![CDATA[$F{tdoc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2984" y="0" width="100" height="20" uuid="df2ef53c-dd38-48e0-94fd-f3887fcb439f"/>
+				<textFieldExpression><![CDATA[$F{documento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3140" y="0" width="100" height="20" uuid="45948c95-8e95-4a59-a8d0-1e3f1f74db95"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3277" y="0" width="100" height="20" uuid="21cb839b-c8c8-4107-838c-2d091c290ccc"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3422" y="0" width="100" height="20" uuid="8687128c-f0ef-4f3b-9e2a-ad9dd1cdcff9"/>
+				<textFieldExpression><![CDATA[$F{id_usuario_fk}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
